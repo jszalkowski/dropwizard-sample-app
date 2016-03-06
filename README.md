@@ -46,8 +46,8 @@ mvn package
 MySQL database setup (with Docker):
 
 ```
-docker run --name=test_db -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql
-docker exec test_db mysql -u root -proot -e "create database db_notes;"
+docker run --name=app_db -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql
+docker exec app_db mysql -u root -proot -e "create database db_notes;"
 ```
 
 Run migrations:
