@@ -2,7 +2,7 @@
 
 A sample application built with [Dropwizard.io](http://dropwizard.io)
 
-Requirements for run this app:
+Requirements to run this app:
 
 * Java 7
 * Maven 3.2.x
@@ -32,7 +32,7 @@ java -jar target/sample-app-1.0-SNAPSHOT.jar db migrate src/test/resources/confi
 Run integration-test:
 
 ```
-mvn mvn failsafe:integration-test
+mvn failsafe:integration-test
 ```
 
 ## Run the application
