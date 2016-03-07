@@ -72,3 +72,36 @@ curl http://127.0.0.1:8080/notes/
 curl http://127.0.0.1:8080/notes/1
 curl http://127.0.0.1:8080/notes/2
 ```
+
+## Vagrant
+
+```
+vagrant up
+```
+
+## Unit and Integration tests for cookbook
+
+```
+cd cookbooks/sample-app
+```
+
+Run unit tests
+
+```
+chef exec rspec
+```
+
+Run integration test
+
+```
+kitchen create
+kitchen converge
+kitchen verify
+kitchen destroy
+```
+
+Abbrv.
+
+```
+kitchen test
+```
