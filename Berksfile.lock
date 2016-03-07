@@ -1,0 +1,6 @@
+DEPENDENCIES
+  sample-app
+    path: cookbooks/sample-app
+
+GRAPH
+  sample-app (0.1.0)
