@@ -75,11 +75,23 @@ curl http://127.0.0.1:8080/notes/2
 
 ## Vagrant
 
+Requirements (Vagrant 1.8.1 or above):
+
+Vagrant plugins:
+
+* vagrant-berkshelf
+* vagrant-cachier
+* vagrant-omnibus
+
 ```
 vagrant up
 ```
 
 ## Unit and Integration tests for cookbook
+
+Requirements:
+
+* Chef-dk 0.10.0
 
 ```
 cd cookbooks/sample-app
