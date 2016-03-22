@@ -8,7 +8,7 @@ provisioner:
     file_cache_path: '/var/chef/cache'
 
 platforms:
-  - name: bento/centos-7.1
+  - name: ubuntu/trusty64
     driver:
       vagrantfile_erb: Vagrantfile
 
