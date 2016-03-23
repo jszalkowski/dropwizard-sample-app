@@ -51,4 +51,23 @@ Vagrant.configure('2') do |config|
     end
   end
 
+  config.vm.define "test" do |test|
+    test.vm.hostname = "test"
+    test.vm.network :private_network, ip: '192.168.33.102'
+
+    test.vm.provider 'virtualbox' do |vb|
+      vb.memory = 1024
+    end
+
+    test.vm.provision :chef_zero, install: true do |chef|
+      chef.verbose_logging
+      chef.nodes_path = 'cookbooks'
+      chef.file_cache_path = '/var/chef/cache'
+      chef.add_recipe 'sample-app::default'
+      chef.json = {
+        "databases": ["db_notes"]
+      }
+    end
+  end
+
 end
