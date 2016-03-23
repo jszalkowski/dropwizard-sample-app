@@ -34,4 +34,22 @@ Vagrant.configure('2') do |config|
     end
   end
 
+  config.vm.define "ci" do |ci|
+    ci.vm.hostname = "ci"
+    ci.vm.network :private_network, ip: '192.168.33.101'
+
+    ci.vm.provider 'virtualbox' do |vb|
+      vb.memory = 1024
+    end
+
+    ci.vm.provision :chef_zero, install: true do |chef|
+      chef.verbose_logging
+      chef.nodes_path = 'cookbooks'
+      chef.file_cache_path = '/var/chef/cache'
+      chef.add_recipe 'ci::default'
+      chef.json = {}
+    end
+  end
+
+
 end
