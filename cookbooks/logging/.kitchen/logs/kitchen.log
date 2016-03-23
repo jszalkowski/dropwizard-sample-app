@@ -1,0 +1,3 @@
+I, [2016-03-25T12:16:29.253651 #15091]  INFO -- Kitchen: -----> Starting Kitchen (v1.5.0)
+I, [2016-03-25T12:16:30.067817 #15091]  INFO -- Kitchen: -----> Destroying <default-ubuntu-trusty64>...
+I, [2016-03-25T12:16:36.395766 #15091]  INFO -- Kitchen: -----> Kitchen is finished. (0m7.14s)
