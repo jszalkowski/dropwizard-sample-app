@@ -1,5 +1,13 @@
 applicationName: Sample App
 
+server:
+  type: simple
+  applicationContextPath: /application
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 8081
+
 database:
   driverClass: com.mysql.jdbc.Driver
   user: root
