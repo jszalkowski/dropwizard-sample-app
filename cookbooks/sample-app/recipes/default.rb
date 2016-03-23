@@ -12,7 +12,7 @@ mysql2_chef_gem 'default' do
   action [:install]
 end
 
-['db_notes', 'db_notes_test'].each do |database_name|
+node['databases'].each do |database_name|
   mysql_database database_name do
     connection(
       :host     => '127.0.0.1',
