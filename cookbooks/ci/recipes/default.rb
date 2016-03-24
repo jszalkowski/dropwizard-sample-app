@@ -6,8 +6,7 @@ jenkins_plugin 'git'
 jenkins_plugin 'greenballs'
 jenkins_plugin 'junit'
 jenkins_plugin 'jobConfigHistory'
-jenkins_plugin 'delivery-pipeline-plugin'
-jenkins_plugin 'build-pipeline-plugin' do
+jenkins_plugin 'delivery-pipeline-plugin' do
   notifies :restart, 'service[jenkins]', :delayed
 end
 
