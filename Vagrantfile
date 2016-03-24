@@ -64,6 +64,7 @@ Vagrant.configure('2') do |config|
       chef.nodes_path = 'cookbooks'
       chef.file_cache_path = '/var/chef/cache'
       chef.add_recipe 'sample-app::default'
+      chef.add_recipe 'sample-app::application_deployment'
       chef.json = {
         "databases": ["db_notes"]
       }
