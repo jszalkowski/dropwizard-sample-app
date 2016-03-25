@@ -4,7 +4,7 @@
     "aws_secret_key": "",
     "name": "default",
     "region": "eu-central-1",
-    "source_ami": "ami-60baaa0c",
+    "source_ami": "ami-7e9b7c11",
     "vpc_id": "",
     "subnet_id": ""
   },
