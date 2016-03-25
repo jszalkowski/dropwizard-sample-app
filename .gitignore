@@ -7,3 +7,5 @@ cookbooks/vagrant-*
 *.pyc
 private.json
 terraform.tfvars
+berks-cookbooks
+*.tfstate*
