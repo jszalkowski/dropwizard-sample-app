@@ -1,0 +1,5 @@
+include_recipe 'java'
+include_recipe 'apt'
+include_recipe 'logging::elasticsearch'
+include_recipe 'logging::logstash'
+include_recipe 'logging::kibana'

@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  client_rb:
+    file_cache_path: '/var/chef/cache'
+
+platforms:
+  - name: ubuntu/trusty64
+    driver:
+      vagrantfile_erb: Vagrantfile
+
+suites:
+  - name: default
+    run_list:
+      - recipe[logging::default]
+    attributes:
