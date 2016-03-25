@@ -11,11 +11,6 @@ filebeat:
         - /var/log/nginx/access.log
       input_type: log
       document_type: nginx-access
-    -
-      paths:
-        - /tmp/unicorn.blog.log
-      input_type: log
-      document_type: unicorn
 output:
   logstash:
     hosts: ["<%= @host %>:5044"]

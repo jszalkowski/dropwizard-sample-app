@@ -1,5 +1,5 @@
-cluster.name: blog
-node.name: blog
+cluster.name: logging
+node.name: logging
 
 index.number_of_shards: 1
 index.number_of_replicas: 0
