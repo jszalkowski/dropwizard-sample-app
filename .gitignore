@@ -6,3 +6,4 @@ cookbooks/vagrant-*
 .vagrant
 *.pyc
 private.json
+terraform.tfvars
