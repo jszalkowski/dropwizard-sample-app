@@ -5,3 +5,4 @@ env/
 cookbooks/vagrant-*
 .vagrant
 *.pyc
+private.json
