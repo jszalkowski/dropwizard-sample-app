@@ -67,8 +67,12 @@ Vagrant.configure('2') do |config|
         chef.add_recipe 'sample-app::default'
         chef.add_recipe 'sample-app::nginx'
         chef.add_recipe 'sample-app::application_deployment'
+        chef.add_recipe 'logging::client'
         chef.json = {
-          "databases": ["db_notes"]
+          "databases": ["db_notes"],
+          "logging": {
+              "host": "192.168.33.110"
+          }
         }
       end
     end
