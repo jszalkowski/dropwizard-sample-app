@@ -1,0 +1,8 @@
+exec: [ "/usr/bin/java", "-jar", "/app/sample-app-1.0-SNAPSHOT.jar", "server", "/app/configuration.yml" ]
+data_sources: [ file, environment_json ]
+template_sources: [ file ]
+
+environments:
+  production:
+    configuration.yml.erb:
+      target: /app/configuration.yml

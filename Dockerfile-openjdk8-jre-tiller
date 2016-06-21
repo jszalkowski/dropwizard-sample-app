@@ -1,0 +1,13 @@
+FROM alpine:edge
+
+RUN apk add --update alpine-sdk \
+    && apk add --update openjdk8-jre-base \
+    && apk add --update ruby \
+    && apk add --update ruby-dev \
+    && gem install --no-ri --no-rdoc json tiller \
+    && rm -rf /var/cache/apk/* \
+    && mkdir /app
+
+ONBUILD ADD tiller /etc/tiller
+
+CMD ["/usr/bin/tiller" , "-v"]
